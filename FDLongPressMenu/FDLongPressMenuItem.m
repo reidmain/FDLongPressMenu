@@ -1,5 +1,6 @@
 #import "FDLongPressMenuItem.h"
 #import "FDLongPressMenuItem+Private.h"
+#import "UIView+Layout.h"
 
 
 #pragma mark Class Definition
@@ -47,13 +48,15 @@
 			highlightedImage: highlightedBackgroundImage];
 	_iconImageView = [[UIImageView alloc] initWithImage: iconImage 
 		highlightedImage: highlightedIconImage];
-	_iconImageView.contentMode = UIViewContentModeCenter;
-	_iconImageView.frame = _backgroundImageView.bounds;
 	
 	// Create a UIView that will be the visual representation of the menu item.
 	_view = [[UIView alloc] initWithFrame:[_backgroundImageView bounds]];
 	[_view addSubview: _backgroundImageView];
 	[_view addSubview: _iconImageView];
+	
+	// Center the icon in the middle of the background image.
+	[_iconImageView alignHorizontally: UIViewHorizontalAlignmentCenter 
+		vertically: UIViewVerticalAlignmentMiddle];
 	
 	// Return initialized instance.
 	return self;
