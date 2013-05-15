@@ -12,9 +12,10 @@ static NSString * const CellReuseIdentifier = @"CellIdentifier";
 
 @interface FDColouredBlocksGridController ()
 
-@property (nonatomic, retain) IBOutlet UICollectionView *collectionView;
-@property (nonatomic, retain) IBOutlet UIView *footerView;
-@property (nonatomic, retain) IBOutlet UIView *footerViewContent;
+@property (nonatomic, weak) IBOutlet UICollectionView *collectionView;
+@property (nonatomic, weak) IBOutlet UIView *footerView;
+@property (nonatomic, weak) IBOutlet UIView *footerViewContent;
+@property (nonatomic, weak) IBOutlet NSLayoutConstraint *footerViewHeightConstraint;
 
 - (void)_initializeColouredBlocksGridController;
 
@@ -97,6 +98,13 @@ static NSString * const CellReuseIdentifier = @"CellIdentifier";
 	// Call base implementation.
 	[super viewDidLoad];
 	
+	// On iPad increase the height of the footer view.
+	UIDevice *currentDevice = [UIDevice currentDevice];
+	if (currentDevice.userInterfaceIdiom == UIUserInterfaceIdiomPad)
+	{
+		_footerViewHeightConstraint.constant = 180.0f;
+	}
+	
 	// Register cell classes with the collection view.
 	[_collectionView registerClass: [FDCollectionViewCell class] 
 		forCellWithReuseIdentifier: CellReuseIdentifier];
@@ -164,7 +172,7 @@ static NSString * const CellReuseIdentifier = @"CellIdentifier";
 	sizeForItemAtIndexPath: (NSIndexPath *)indexPath
 {
 	UIDevice *currentDevice = [UIDevice currentDevice];
-	CGFloat squareSideLength = currentDevice.userInterfaceIdiom == UIUserInterfaceIdiomPad ? 192.0f : 100.0f;
+	CGFloat squareSideLength = currentDevice.userInterfaceIdiom == UIUserInterfaceIdiomPad ? 244.0f : 100.0f;
 	
 	CGSize itemSize = CGSizeMake(squareSideLength, squareSideLength);
 	
@@ -180,7 +188,7 @@ static NSString * const CellReuseIdentifier = @"CellIdentifier";
 	if (collectionView == _collectionView)
 	{
 		UIDevice *currentDevice = [UIDevice currentDevice];
-		minimumLineSpacing = currentDevice.userInterfaceIdiom == UIUserInterfaceIdiomPad ? 16.0f : 10.0f;
+		minimumLineSpacing = currentDevice.userInterfaceIdiom == UIUserInterfaceIdiomPad ? 12.0f : 10.0f;
 	}
 	
 	return minimumLineSpacing;
@@ -195,7 +203,7 @@ static NSString * const CellReuseIdentifier = @"CellIdentifier";
 	if (collectionView == _collectionView)
 	{
 		UIDevice *currentDevice = [UIDevice currentDevice];
-		minimumInteritemSpacing = currentDevice.userInterfaceIdiom == UIUserInterfaceIdiomPad ? 6.0f : 10.0f;
+		minimumInteritemSpacing = currentDevice.userInterfaceIdiom == UIUserInterfaceIdiomPad ? 12.0f : 10.0f;
 	}
 	
 	return minimumInteritemSpacing;
