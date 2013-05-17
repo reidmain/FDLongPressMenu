@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		274161EC1737F79A001FE199 /* FDCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 274161EB1737F79A001FE199 /* FDCollectionViewCell.m */; };
+		2764778B174678AA00E8E330 /* libFDLongPressMenu Static Library.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2764778A1746789500E8E330 /* libFDLongPressMenu Static Library.a */; };
 		2785D54C1733389F007B99B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2785D54B1733389F007B99B1 /* Foundation.framework */; };
 		2785D54E1733389F007B99B1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2785D54D1733389F007B99B1 /* CoreGraphics.framework */; };
 		2785D5501733389F007B99B1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2785D54F1733389F007B99B1 /* QuartzCore.framework */; };
@@ -34,7 +35,6 @@
 		2785D5A01733389F007B99B1 /* launch_ipad-Landscape@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2785D59F1733389F007B99B1 /* launch_ipad-Landscape@2x.png */; };
 		2785D5CB17333C66007B99B1 /* FDColouredBlocksGridController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2785D5CA17333C66007B99B1 /* FDColouredBlocksGridController.m */; };
 		2785D5CD17333D1A007B99B1 /* FDColouredBlocksGridView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2785D5CC17333D1A007B99B1 /* FDColouredBlocksGridView.xib */; };
-		2785D5E41733451D007B99B1 /* libFDLongPressMenu Static Library.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2785D5E117334511007B99B1 /* libFDLongPressMenu Static Library.a */; };
 		2785D5F417334F8C007B99B1 /* radial_menu_background_highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 2785D5F017334F8C007B99B1 /* radial_menu_background_highlighted.png */; };
 		2785D5F517334F8C007B99B1 /* radial_menu_background_highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2785D5F117334F8C007B99B1 /* radial_menu_background_highlighted@2x.png */; };
 		2785D5F617334F8C007B99B1 /* radial_menu_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 2785D5F217334F8C007B99B1 /* radial_menu_background.png */; };
@@ -50,14 +50,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2785D5E017334511007B99B1 /* PBXContainerItemProxy */ = {
+		276477891746789500E8E330 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2785D5AF173338B7007B99B1 /* FDLongPressMenu Static Library.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 2785D52D1733382C007B99B1;
 			remoteInfo = FDLongPressMenu;
 		};
-		2785D5E217334518007B99B1 /* PBXContainerItemProxy */ = {
+		2764778C174678AF00E8E330 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2785D5AF173338B7007B99B1 /* FDLongPressMenu Static Library.xcodeproj */;
 			proxyType = 1;
@@ -98,7 +98,7 @@
 		2785D59B1733389F007B99B1 /* launch_ipad-Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launch_ipad-Landscape.png"; sourceTree = "<group>"; };
 		2785D59D1733389F007B99B1 /* launch_ipad-Portrait@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launch_ipad-Portrait@2x.png"; sourceTree = "<group>"; };
 		2785D59F1733389F007B99B1 /* launch_ipad-Landscape@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launch_ipad-Landscape@2x.png"; sourceTree = "<group>"; };
-		2785D5AF173338B7007B99B1 /* FDLongPressMenu Static Library.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "FDLongPressMenu Static Library.xcodeproj"; path = "../Static Library Project/FDLongPressMenu Static Library.xcodeproj"; sourceTree = "<group>"; };
+		2785D5AF173338B7007B99B1 /* FDLongPressMenu Static Library.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "FDLongPressMenu Static Library.xcodeproj"; path = "Static Library Project/FDLongPressMenu Static Library.xcodeproj"; sourceTree = "<group>"; };
 		2785D5C917333C66007B99B1 /* FDColouredBlocksGridController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDColouredBlocksGridController.h; sourceTree = "<group>"; };
 		2785D5CA17333C66007B99B1 /* FDColouredBlocksGridController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDColouredBlocksGridController.m; sourceTree = "<group>"; };
 		2785D5CC17333D1A007B99B1 /* FDColouredBlocksGridView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FDColouredBlocksGridView.xib; sourceTree = "<group>"; };
@@ -121,7 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2785D5E41733451D007B99B1 /* libFDLongPressMenu Static Library.a in Frameworks */,
+				2764778B174678AA00E8E330 /* libFDLongPressMenu Static Library.a in Frameworks */,
 				2785D54C1733389F007B99B1 /* Foundation.framework in Frameworks */,
 				2785D54E1733389F007B99B1 /* CoreGraphics.framework in Frameworks */,
 				2785D5501733389F007B99B1 /* QuartzCore.framework in Frameworks */,
@@ -132,6 +132,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		276477861746789500E8E330 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2764778A1746789500E8E330 /* libFDLongPressMenu Static Library.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		2785D53F1733389F007B99B1 = {
 			isa = PBXGroup;
 			children = (
@@ -336,14 +344,6 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
-		2785D5DD17334511007B99B1 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				2785D5E117334511007B99B1 /* libFDLongPressMenu Static Library.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		2785D5EF17334F8C007B99B1 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -377,7 +377,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				2785D5E317334518007B99B1 /* PBXTargetDependency */,
+				2764778D174678AF00E8E330 /* PBXTargetDependency */,
 			);
 			name = "FDLongPressMenu iOS Example";
 			productName = "FDLongPressMenu iOS Example";
@@ -405,7 +405,7 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 2785D5DD17334511007B99B1 /* Products */;
+					ProductGroup = 276477861746789500E8E330 /* Products */;
 					ProjectRef = 2785D5AF173338B7007B99B1 /* FDLongPressMenu Static Library.xcodeproj */;
 				},
 			);
@@ -417,12 +417,12 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		2785D5E117334511007B99B1 /* libFDLongPressMenu Static Library.a */ = {
+		2764778A1746789500E8E330 /* libFDLongPressMenu Static Library.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			name = "libFDLongPressMenu Static Library.a";
 			path = libFDLongPressMenu.a;
-			remoteRef = 2785D5E017334511007B99B1 /* PBXContainerItemProxy */;
+			remoteRef = 276477891746789500E8E330 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -483,10 +483,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2785D5E317334518007B99B1 /* PBXTargetDependency */ = {
+		2764778D174678AF00E8E330 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = FDLongPressMenu;
-			targetProxy = 2785D5E217334518007B99B1 /* PBXContainerItemProxy */;
+			targetProxy = 2764778C174678AF00E8E330 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
