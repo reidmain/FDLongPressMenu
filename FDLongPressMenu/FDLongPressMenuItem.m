@@ -7,10 +7,6 @@
 
 @implementation FDLongPressMenuItem
 {
-	@private __strong UIImage *_backgroundImage;
-	@private __strong UIImage *_highlightedBackgroundImage;
-	@private __strong UIImage *_iconImage;
-	@private __strong UIImage *_highlightedIconImage;
 	@private __strong UIImageView *_backgroundImageView;
 	@private __strong UIImageView *_iconImageView;
 }
@@ -39,10 +35,6 @@
 	}
 	
 	// Initialize instance variables.
-	_backgroundImage = backgroundImage;
-	_highlightedBackgroundImage = highlightedBackgroundImage;
-	_iconImage = iconImage;
-	_highlightedIconImage = highlightedIconImage;
 	_backgroundImageView = [[UIImageView alloc] 
 		initWithImage: backgroundImage 
 			highlightedImage: highlightedBackgroundImage];
