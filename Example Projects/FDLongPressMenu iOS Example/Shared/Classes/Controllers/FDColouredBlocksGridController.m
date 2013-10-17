@@ -6,6 +6,13 @@
 #pragma mark Constants
 
 static NSString * const CellReuseIdentifier = @"CellIdentifier";
+static NSString * const FillColour_Red = @"Red";
+static NSString * const FillColour_Green = @"Green";
+static NSString * const FillColour_Blue = @"Blue";
+static NSString * const FillColour_Black = @"Black";
+static NSString * const FillColour_Orange = @"Orange";
+static NSString * const FillColour_Purple = @"Purple";
+static NSString * const FillColour_Yellow = @"Yellow";
 
 
 #pragma mark - Class Extension
@@ -38,7 +45,7 @@ static NSString * const CellReuseIdentifier = @"CellIdentifier";
 	{
 		return nil;
 	}
-
+	
 	// Return initialized instance.
 	return self;
 }
@@ -261,38 +268,30 @@ static NSString * const CellReuseIdentifier = @"CellIdentifier";
 	{
 		_footerView.backgroundColor = [UIColor orangeColor];
 		
-		UIImage *backgroundImage = [UIImage imageNamed: @"radial_menu_background"];
-		UIImage *highlightedBackgroundImage = [UIImage imageNamed: @"radial_menu_background_highlighted"];
+		UIImage *bucketImage = [UIImage imageNamed: @"radial_menu_icon_bucket"];
 		
 		FDLongPressMenuItem *fillRedMenuItem = [[FDLongPressMenuItem alloc] 
-			initWithBackgroundImage: backgroundImage 
-				highlightedBackgroundImage: highlightedBackgroundImage 
-				iconImage: [UIImage imageNamed: @"radial_menu_icon_fill_red"] 
+			initWithBackgroundImage: [UIImage imageNamed: @"radial_menu_background_red"] 
+				highlightedBackgroundImage: nil 
+				iconImage: bucketImage 
 				highlightedIconImage: nil];
-		fillRedMenuItem.title = @"Red";
+		fillRedMenuItem.title = FillColour_Red;
 		
 		FDLongPressMenuItem *fillGreenMenuItem = [[FDLongPressMenuItem alloc] 
-			initWithBackgroundImage: backgroundImage 
-				highlightedBackgroundImage: highlightedBackgroundImage 
-				iconImage: [UIImage imageNamed: @"radial_menu_icon_fill_green"] 
+			initWithBackgroundImage: [UIImage imageNamed: @"radial_menu_background_green"] 
+				highlightedBackgroundImage: nil 
+				iconImage: bucketImage 
 				highlightedIconImage: nil];
-		fillGreenMenuItem.title = @"Green";
+		fillGreenMenuItem.title = FillColour_Green;
 		
 		FDLongPressMenuItem *fillBlueMenuItem = [[FDLongPressMenuItem alloc] 
-			initWithBackgroundImage: backgroundImage 
-				highlightedBackgroundImage: highlightedBackgroundImage 
-				iconImage: [UIImage imageNamed: @"radial_menu_icon_fill_blue"] 
+			initWithBackgroundImage: [UIImage imageNamed: @"radial_menu_background_blue"] 
+				highlightedBackgroundImage: nil 
+				iconImage: bucketImage 
 				highlightedIconImage: nil];
-		fillBlueMenuItem.title = @"Blue";
+		fillBlueMenuItem.title = FillColour_Blue;
 		
-		FDLongPressMenuItem *eraserMenuItem = [[FDLongPressMenuItem alloc] 
-			initWithBackgroundImage: backgroundImage 
-				highlightedBackgroundImage: highlightedBackgroundImage 
-				iconImage: [UIImage imageNamed: @"radial_menu_icon_eraser"] 
-				highlightedIconImage: nil];
-		eraserMenuItem.title = @"Eraser";
-		
-		longPressMenuItems = @ [ fillRedMenuItem, fillGreenMenuItem, fillBlueMenuItem, eraserMenuItem ];
+		longPressMenuItems = @ [ fillRedMenuItem, fillGreenMenuItem, fillBlueMenuItem ];
 	}
 	// Generate the menu items if the point is on a item in the collection view.
 	else
@@ -313,34 +312,61 @@ static NSString * const CellReuseIdentifier = @"CellIdentifier";
 					animated: YES 
 					scrollPosition: UICollectionViewScrollPositionNone];
 				
-				UIImage *backgroundImage = [UIImage imageNamed: @"radial_menu_background"];
-				UIImage *highlightedBackgroundImage = [UIImage imageNamed: @"radial_menu_background_highlighted"];
+				UIImage *bucketImage = [UIImage imageNamed: @"radial_menu_icon_bucket"];
 				
 				FDLongPressMenuItem *fillRedMenuItem = [[FDLongPressMenuItem alloc] 
-					initWithBackgroundImage: backgroundImage 
-						highlightedBackgroundImage: highlightedBackgroundImage 
-						iconImage: [UIImage imageNamed: @"radial_menu_icon_fill_red"] 
+					initWithBackgroundImage: [UIImage imageNamed: @"radial_menu_background_red"] 
+						highlightedBackgroundImage: nil 
+						iconImage: bucketImage 
 						highlightedIconImage: nil];
 				fillRedMenuItem.context = indexPath;
-				fillRedMenuItem.title = @"Red";
+				fillRedMenuItem.title = FillColour_Red;
 				
 				FDLongPressMenuItem *fillGreenMenuItem = [[FDLongPressMenuItem alloc] 
-					initWithBackgroundImage: backgroundImage 
-						highlightedBackgroundImage: highlightedBackgroundImage 
-						iconImage: [UIImage imageNamed: @"radial_menu_icon_fill_green"] 
+					initWithBackgroundImage: [UIImage imageNamed: @"radial_menu_background_green"] 
+						highlightedBackgroundImage: nil 
+						iconImage: bucketImage 
 						highlightedIconImage: nil];
 				fillGreenMenuItem.context = indexPath;
-				fillGreenMenuItem.title = @"Green";
+				fillGreenMenuItem.title = FillColour_Green;
 				
 				FDLongPressMenuItem *fillBlueMenuItem = [[FDLongPressMenuItem alloc] 
-					initWithBackgroundImage: backgroundImage 
-						highlightedBackgroundImage: highlightedBackgroundImage 
-						iconImage: [UIImage imageNamed: @"radial_menu_icon_fill_blue"] 
+					initWithBackgroundImage: [UIImage imageNamed: @"radial_menu_background_blue"] 
+						highlightedBackgroundImage: nil 
+						iconImage: bucketImage 
 						highlightedIconImage: nil];
 				fillBlueMenuItem.context = indexPath;
-				fillBlueMenuItem.title = @"Blue";
+				fillBlueMenuItem.title = FillColour_Blue;
 				
-				longPressMenuItems = @ [ fillRedMenuItem, fillGreenMenuItem, fillBlueMenuItem ];
+				FDLongPressMenuItem *blackMenuItem = [[FDLongPressMenuItem alloc] 
+					initWithBackgroundImage: [UIImage imageNamed: @"radial_menu_background_black"] 
+						highlightedBackgroundImage: nil 
+						iconImage: bucketImage 
+						highlightedIconImage: nil];
+				blackMenuItem.title = FillColour_Black;
+				
+				FDLongPressMenuItem *orangeMenuItem = [[FDLongPressMenuItem alloc] 
+					initWithBackgroundImage: [UIImage imageNamed: @"radial_menu_background_orange"] 
+						highlightedBackgroundImage: nil 
+						iconImage: bucketImage 
+						highlightedIconImage: nil];
+				orangeMenuItem.title = FillColour_Orange;
+				
+				FDLongPressMenuItem *purpleMenuItem = [[FDLongPressMenuItem alloc] 
+					initWithBackgroundImage: [UIImage imageNamed: @"radial_menu_background_purple"] 
+						highlightedBackgroundImage: nil 
+						iconImage: bucketImage 
+						highlightedIconImage: nil];
+				purpleMenuItem.title = FillColour_Purple;
+				
+				FDLongPressMenuItem *yellowMenuItem = [[FDLongPressMenuItem alloc] 
+					initWithBackgroundImage: [UIImage imageNamed: @"radial_menu_background_yellow"] 
+						highlightedBackgroundImage: nil 
+						iconImage: bucketImage 
+						highlightedIconImage: nil];
+				yellowMenuItem.title = FillColour_Yellow;
+				
+				longPressMenuItems = @ [ fillRedMenuItem, fillGreenMenuItem, fillBlueMenuItem, blackMenuItem, orangeMenuItem, purpleMenuItem, yellowMenuItem ];
 			}
 		}
 	}
@@ -355,45 +381,59 @@ static NSString * const CellReuseIdentifier = @"CellIdentifier";
 	[_collectionView deselectItemAtIndexPath: indexPathOfSelectedItem 
 		animated: YES];
 	
+	UIColor *color = nil;
+	if ([longPressMenuItem.title isEqualToString: FillColour_Red] == YES)
+	{
+		color = [UIColor redColor];
+	}
+	else if ([longPressMenuItem.title isEqualToString: FillColour_Green] == YES)
+	{
+		color = [UIColor greenColor];
+	}
+	else if ([longPressMenuItem.title isEqualToString: FillColour_Blue] == YES)
+	{
+		color = [UIColor blueColor];
+	}
+	else if ([longPressMenuItem.title isEqualToString: FillColour_Black] == YES)
+	{
+		color = [UIColor blackColor];
+	}
+	else if ([longPressMenuItem.title isEqualToString: FillColour_Orange] == YES)
+	{
+		color = [UIColor colorWithRed: 255.0f / 255.0f 
+			green: 138.0f / 255.0f 
+			blue: 0.0f / 255.0f 
+			alpha: 1.0f];
+	}
+	else if ([longPressMenuItem.title isEqualToString: FillColour_Purple] == YES)
+	{
+		color = [UIColor colorWithRed: 138.0f / 255.0f 
+			green: 0.0f / 255.0f 
+			blue: 255.0f / 255.0f 
+			alpha: 1.0f];
+	}
+	else if ([longPressMenuItem.title isEqualToString: FillColour_Yellow] == YES)
+	{
+		color = [UIColor colorWithRed: 255.0f / 255.0f 
+			green: 240.0f / 255.0f 
+			blue: 0.0f / 255.0f 
+			alpha: 1.0f];
+	}
+	
 	NSIndexPath *indexPath = longPressMenuItem.context;
 	if(indexPath == nil)
 	{
-		_footerView.backgroundColor = [UIColor whiteColor];
-		if ([longPressMenuItem.title isEqualToString: @"Red"] == YES)
+		_footerView.backgroundColor = [UIColor lightGrayColor];
+		
+		if (color != nil)
 		{
-			_footerViewContent.backgroundColor = [UIColor redColor];
-		}
-		else if ([longPressMenuItem.title isEqualToString: @"Green"] == YES)
-		{
-			_footerViewContent.backgroundColor = [UIColor greenColor];
-		}
-		else if ([longPressMenuItem.title isEqualToString: @"Blue"] == YES)
-		{
-			_footerViewContent.backgroundColor = [UIColor blueColor];
-		}
-		else if ([longPressMenuItem.title isEqualToString: @"Eraser"] == YES)
-		{
-			_footerViewContent.backgroundColor = [UIColor colorWithRed: 0.0f / 255.0f 
-				green: 56.0f / 255.0f 
-				blue: 118.0f / 255.0f 
-				alpha: 1.0f];
+			_footerViewContent.backgroundColor = color;
 		}
 	}
 	else
 	{
 		UICollectionViewCell *collectionViewCell = [_collectionView cellForItemAtIndexPath: indexPath];
-		if ([longPressMenuItem.title isEqualToString: @"Red"] == YES)
-		{
-			collectionViewCell.backgroundColor = [UIColor redColor];
-		}
-		else if ([longPressMenuItem.title isEqualToString: @"Green"] == YES)
-		{
-			collectionViewCell.backgroundColor = [UIColor greenColor];
-		}
-		else if ([longPressMenuItem.title isEqualToString: @"Blue"] == YES)
-		{
-			collectionViewCell.backgroundColor = [UIColor blueColor];
-		}
+		collectionViewCell.backgroundColor = color;
 	}
 }
 

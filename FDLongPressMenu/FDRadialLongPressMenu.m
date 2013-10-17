@@ -262,7 +262,7 @@
 			view.transform = CGAffineTransformMakeScale(1.0f, 1.0f);
 		}];
 	
-	// If the distance to the closest menu item is less than the radius of the circle enlarge the item by some factor to indicate to the user they are close to selectin git.
+	// If the distance to the closest menu item is less than the radius of the circle enlarge the item by some factor to indicate to the user they are close to selecting it.
 	if(distanceToClosestItem <= _radius)
 	{
 		CGFloat enlargementFactor = 1.0f + (((_radius - distanceToClosestItem) / _radius) * 0.6);
