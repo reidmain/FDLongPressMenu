@@ -111,8 +111,7 @@
 		
 		// If the root view controller of the window wants full screen layout and the status bar is visible the container view needs to be offset so it does not appear below the status bar.
 		UIApplication *sharedApplication = [UIApplication sharedApplication];
-		if ([gestureWindow.rootViewController wantsFullScreenLayout] == YES 
-			&& sharedApplication.statusBarHidden == NO)
+		if (sharedApplication.statusBarHidden == NO)
 		{
 			// The statusBarFrame property returns back the incorrect values when the app is in landscape mode. The minimum value of the width/height will be the actual height of the status bar.
 			CGFloat statusBarHeight = MIN(sharedApplication.statusBarFrame.size.width, sharedApplication.statusBarFrame.size.height);

@@ -291,7 +291,14 @@ static NSString * const FillColour_Yellow = @"Yellow";
 				highlightedIconImage: nil];
 		fillBlueMenuItem.title = FillColour_Blue;
 		
-		longPressMenuItems = @ [ fillRedMenuItem, fillGreenMenuItem, fillBlueMenuItem ];
+		FDLongPressMenuItem *blackMenuItem = [[FDLongPressMenuItem alloc] 
+			initWithBackgroundImage: [UIImage imageNamed: @"radial_menu_background_black"] 
+				highlightedBackgroundImage: nil 
+				iconImage: bucketImage 
+				highlightedIconImage: nil];
+		blackMenuItem.title = FillColour_Black;
+		
+		longPressMenuItems = @ [ fillRedMenuItem, fillGreenMenuItem, fillBlueMenuItem, blackMenuItem ];
 	}
 	// Generate the menu items if the point is on a item in the collection view.
 	else
@@ -343,6 +350,7 @@ static NSString * const FillColour_Yellow = @"Yellow";
 						highlightedBackgroundImage: nil 
 						iconImage: bucketImage 
 						highlightedIconImage: nil];
+				blackMenuItem.context = indexPath;
 				blackMenuItem.title = FillColour_Black;
 				
 				FDLongPressMenuItem *orangeMenuItem = [[FDLongPressMenuItem alloc] 
@@ -350,6 +358,7 @@ static NSString * const FillColour_Yellow = @"Yellow";
 						highlightedBackgroundImage: nil 
 						iconImage: bucketImage 
 						highlightedIconImage: nil];
+				orangeMenuItem.context = indexPath;
 				orangeMenuItem.title = FillColour_Orange;
 				
 				FDLongPressMenuItem *purpleMenuItem = [[FDLongPressMenuItem alloc] 
@@ -357,6 +366,7 @@ static NSString * const FillColour_Yellow = @"Yellow";
 						highlightedBackgroundImage: nil 
 						iconImage: bucketImage 
 						highlightedIconImage: nil];
+				purpleMenuItem.context = indexPath;
 				purpleMenuItem.title = FillColour_Purple;
 				
 				FDLongPressMenuItem *yellowMenuItem = [[FDLongPressMenuItem alloc] 
@@ -364,6 +374,7 @@ static NSString * const FillColour_Yellow = @"Yellow";
 						highlightedBackgroundImage: nil 
 						iconImage: bucketImage 
 						highlightedIconImage: nil];
+				yellowMenuItem.context = indexPath;
 				yellowMenuItem.title = FillColour_Yellow;
 				
 				longPressMenuItems = @ [ fillRedMenuItem, fillGreenMenuItem, fillBlueMenuItem, blackMenuItem, orangeMenuItem, purpleMenuItem, yellowMenuItem ];
