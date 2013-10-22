@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		274161EC1737F79A001FE199 /* FDCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 274161EB1737F79A001FE199 /* FDCollectionViewCell.m */; };
-		2764778B174678AA00E8E330 /* libFDLongPressMenu Static Library.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2764778A1746789500E8E330 /* libFDLongPressMenu Static Library.a */; };
+		2764778B174678AA00E8E330 /* libFDLongPressMenu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2764778A1746789500E8E330 /* libFDLongPressMenu.a */; };
 		2785D54C1733389F007B99B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2785D54B1733389F007B99B1 /* Foundation.framework */; };
 		2785D54E1733389F007B99B1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2785D54D1733389F007B99B1 /* CoreGraphics.framework */; };
 		2785D5501733389F007B99B1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2785D54F1733389F007B99B1 /* QuartzCore.framework */; };
@@ -69,11 +69,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2764778B174678AA00E8E330 /* libFDLongPressMenu Static Library.a in Frameworks */,
 				2785D54C1733389F007B99B1 /* Foundation.framework in Frameworks */,
 				2785D54E1733389F007B99B1 /* CoreGraphics.framework in Frameworks */,
 				2785D5501733389F007B99B1 /* QuartzCore.framework in Frameworks */,
 				2785D5521733389F007B99B1 /* UIKit.framework in Frameworks */,
+				2764778B174678AA00E8E330 /* libFDLongPressMenu.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,7 +83,7 @@
 		276477861746789500E8E330 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2764778A1746789500E8E330 /* libFDLongPressMenu Static Library.a */,
+				2764778A1746789500E8E330 /* libFDLongPressMenu.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -275,10 +275,9 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		2764778A1746789500E8E330 /* libFDLongPressMenu Static Library.a */ = {
+		2764778A1746789500E8E330 /* libFDLongPressMenu.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			name = "libFDLongPressMenu Static Library.a";
 			path = libFDLongPressMenu.a;
 			remoteRef = 276477891746789500E8E330 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
