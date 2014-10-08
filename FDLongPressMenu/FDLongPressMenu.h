@@ -1,3 +1,4 @@
+@import UIKit;
 #import "FDLongPressMenuItem.h"
 #import "FDLongPressMenuDelegate.h"
 #import "UIView+LongPressMenu.h"

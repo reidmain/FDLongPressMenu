@@ -1,3 +1,6 @@
+@import UIKit;
+
+
 #pragma mark Class Interface
 
 @interface FDLongPressMenuItem : NSObject
